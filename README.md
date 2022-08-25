@@ -11,6 +11,6 @@ Included is a somewhat workable STEP file you can use for modeling an enclosure
 Everything else is pretty self-explanatory. You don't need too big a grasp of electronics to use the contents, just
 a willingness to learn - some of the files provide guarantee most of the work is already done.
 
-[image](https://user-images.githubusercontent.com/24400566/186554213-0b1e5d74-8df3-4cb5-a4b8-6f6f7c0e0e3d.png)
+![image](https://user-images.githubusercontent.com/24400566/186554213-0b1e5d74-8df3-4cb5-a4b8-6f6f7c0e0e3d.png)
 
 As usual, suggestions welcome.
