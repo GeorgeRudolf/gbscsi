@@ -2,6 +2,9 @@
 From parts unknown... A Cheap SCSI Disk Emulator board
 
 This thing is poorly documented. Everything in this repo was, if still somewhat carefully, hastily done.
+The first version posted to github on Aug-24-2022 had one major issue (despite being still usable), so
+the board got respun after just one day. Nice job, George.
+
 It's free. Do whatever the hell you want with it. Just keep attribution.
 Unfortunately the actual design files are in proprietary format, but I may redo it in KiCad someday.
 If that ever happens, I'll push it here.
