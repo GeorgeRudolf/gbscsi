@@ -1,0 +1,4 @@
+0.1A: initial version
+0.1B: redone silkscreen, changed button positions
+0.1C: part designators cleaned up to make sense, overall cleanup, part position tweaks
+added PB2/BOOT1 pushbutton for STM32duino USB bootloader (what a screw-up, George), cleaned up instructions
