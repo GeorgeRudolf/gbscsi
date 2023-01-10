@@ -37,20 +37,8 @@ Next you need to wire the FT232H to the SWD header of the GBSCSI device. First, 
 
 If you have multiple boards, you may find it easier to attach the headers to a simple [Male Header Pin Strip](https://www.adafruit.com/product/4173) and then you can simply hold that in place for the quick programming process without soldering.
 
-Next, connect the FTDI Breakout to your Linux system and open two terminal windows. In one we will launch the OpenOCD program with the following command line:
+Next, connect the FTDI Breakout to your Linux system and open a terminal window. In the terminal we will launch the OpenOCD program with the following command line:
 
-```sudo openocd -f /usr/share/openocd/scripts/interface/ftdi/ft232h-module-swd.cfg -f /usr/share/openocd/scripts/target/stm32f1x.cfg```
+```sudo openocd -f /usr/share/openocd/scripts/interface/ftdi/ft232h-module-swd.cfg -f /usr/share/openocd/scripts/target/stm32f1x.cfg -c "program BlueSCSI-v1.1-20220917-STM32F1.bin 0x8000000 verify reset exit" ```
 
-This tells OpenOCD that we are using the ft232h module in SWD mode and that we are connecting to an stm32f1 series device. If you get timeout errors, that usually means your connection between the FT232H Breakout and the GBSCSI is not correct or intermittent.
-
-In the second window, you will need to run:
-
-```telnet localhost 4444```
-
-This will connect you to the command line interface for OpenOCD. From here you can upload the image to the GBSCSI device with the following command:
-
-```flash write_image erase BlueSCSI-v1.1-20220917-STM32F1.bin 0x08000000```
-
-This command assumes that the BlueSCSI image file is in the same directory where OpenOCD was started from. If successful, the ACTY and STATUS light will start blinking in an alternativly. This will overwrite any other information on the microcontroller flash, so the same process and commands can be used for recovery as well.
-
-Once complete, simply press CTRL+C on the OpenOCD window to complete the session.
+This tells OpenOCD that we are using the ft232h module in SWD mode and that we are connecting to an stm32f1 series device. Then we are using the `-c` option to tell OpenOCD to upload the BlueSCSI bin file from the current directory (you can adjust the path if needed), verify, reset the MCU, and exit OpenOCD. If successful, the ACTY and STATUS light will start blinking in an alternativly. This will overwrite any other information on the microcontroller flash, so the same process and commands can be used for recovery as well.
