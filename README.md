@@ -6,8 +6,6 @@ The first version posted to github on Aug-24-2022 had one major issue (despite b
 the board got respun after just one day. And then again because of a miswired trace. Nice job, George.
 
 It's free. Do whatever the hell you want with it. Just keep attribution.
-Unfortunately the actual design files are in proprietary format, but I may redo it in KiCad someday.
-If that ever happens, I'll push it here.
 
 Included is a somewhat workable STEP file you can use for modeling an enclosure.
 
@@ -20,4 +18,4 @@ a willingness to learn - some of the files provided guarantee most of the work i
 
 ![image](https://user-images.githubusercontent.com/24400566/186554213-0b1e5d74-8df3-4cb5-a4b8-6f6f7c0e0e3d.png)
 
-As usual, suggestions welcome.
+This project will no longer be updated.
